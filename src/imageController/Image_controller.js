@@ -17,7 +17,7 @@ conn.once('open',()=>{
 
 
 const ImageUpload=async(req,res)=>{
-    const url='http://localhost:5000'
+    const url='https://fileshairingapp.onrender.com/'
   try {
     if(!req.file){
       return res.status(404).send({status:true,msg:"File not found"})
