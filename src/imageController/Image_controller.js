@@ -23,7 +23,7 @@ const ImageUpload=async(req,res)=>{
       return res.status(404).send({status:true,msg:"File not found"})
     }
      
-    const ImageUrl=`${url}/file/${req.file.filename}`
+    const ImageUrl=`${url}/file/${req.file.filename.split(' ').join('')}`
       return res.status(200).send({status:true,data:ImageUrl})
   
     } catch (error) {
