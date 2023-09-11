@@ -37,7 +37,7 @@ const GetImage= async(req,res)=>{
     try {
      
     
-    const file= await gfs.files.findOne({filename:req.params.filename})
+    const file= await gfs.files.findOne({filename:req.params.filename.split(' ').join('')})
     const readStream = gridfsBucket.openDownloadStream(file._id);
     readStream.pipe(res);
 
