@@ -11,7 +11,7 @@ app.use(cors())
 
 mongoose.connect('mongodb+srv://RahulChaudhary:Rahul321@cluster1.42h1ws9.mongodb.net/ImageUpload?retryWrites=true&w=majority')
 .then(()=>{
-    console.log('mongiDb connect successfully..')
+    console.log('mongoDb connect successfully..')
 })
 .catch((err)=>{
    console.log(err)

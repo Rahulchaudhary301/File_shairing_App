@@ -9,12 +9,12 @@ const storage=new GridFsStorage({
     file:(req,file)=>{
         const match=["image/png","image/jpg"];
         if(match.indexOf(file.mimeType==-1)){
-            return `${Date.now()}-file-${file.originalname.split(' ').join('')}`
+            return `${new Date().toLocaleDateString()}-file-${file.originalname.split(' ').join('')}`
         }
 
         return{
             bucketName:"photos",
-            fileName:`${Date.now}-file-${file.originalname.split(' ').join('')}`
+            fileName:`${new Date().toLocaleDateString()}-file-${file.originalname.split(' ').join('')}`
         }
 
     }
